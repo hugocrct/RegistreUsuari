@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/contenidorPrincipal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/tvEtiquetaNom"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Nom:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@id/etNom"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/etNom"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Nom"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvEtiquetaNom"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvEtiquetaCognoms"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Cognoms:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@id/etCognoms"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/etCognoms"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Cognoms"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvEtiquetaCognoms"
+        app:layout_constraintTop_toBottomOf="@id/etNom" />
+
+    <TextView
+        android:id="@+id/tvEtiquetaEdat"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Edat:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@id/etEdat"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/etEdat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Edat"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvEtiquetaEdat"
+        app:layout_constraintTop_toBottomOf="@id/etCognoms" />
+
+    <TextView
+        android:id="@+id/tvEtiquetaMatriculat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Matriculat"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etEdat" />
+
+    <RadioGroup
+        android:id="@+id/rgMatriculat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvEtiquetaMatriculat">
+
+        <RadioButton
+            android:id="@+id/rbMatriculatSi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sí" />
+
+        <RadioButton
+            android:id="@+id/rbMatriculatNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="No" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnMostrarInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Mostrar Info"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rgMatriculat" />
+
+    <TextView
+        android:id="@+id/tvPolitica"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Pendent d'acceptar"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnMostrarInfo" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/contenidorResultat"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/tvEtiquetaResultatNom"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:text="Nom:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvResultatNom" />
+
+    <TextView
+        android:id="@+id/tvResultatNom"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvEtiquetaResultatNom"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvEtiquetaResultatCognoms"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:text="Cognoms:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvResultatCognoms" />
+
+    <TextView
+        android:id="@+id/tvResultatCognoms"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvEtiquetaResultatCognoms"
+        app:layout_constraintTop_toBottomOf="@id/tvResultatNom" />
+
+    <TextView
+        android:id="@+id/tvEtiquetaResultatEdat"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:text="Edat:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvResultatEdat" />
+
+    <TextView
+        android:id="@+id/tvResultatEdat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvEtiquetaResultatEdat"
+        app:layout_constraintTop_toBottomOf="@id/tvResultatCognoms" />
+
+    <TextView
+        android:id="@+id/tvEtiquetaResultatMatriculat"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:text="Matriculat:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvResultatMatriculat" />
+
+    <TextView
+        android:id="@+id/tvResultatMatriculat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvEtiquetaResultatMatriculat"
+        app:layout_constraintTop_toBottomOf="@id/tvResultatEdat" />
+
+    <CheckBox
+        android:id="@+id/cbPoliticaConfidencialitat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Accepto la política de confidencialitat"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvResultatMatriculat" />
+
+    <Button
+        android:id="@+id/btnTornar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Tornar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cbPoliticaConfidencialitat" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
